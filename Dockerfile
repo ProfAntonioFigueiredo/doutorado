@@ -10,13 +10,13 @@ COPY package*.json ./
 # Instala as dependências do Node.js
 RUN npm install
 
-RUN npm install ajv@beta
-
 # Copia os arquivos da aplicação React para o diretório de trabalho
 COPY . .
 
+RUN chmod -R 777 node_modules
+
 # Compila a aplicação React (se necessário)
-RUN npm run build
+RUN npm start
 
 # Expõe a porta 3000 para o servidor Node.js
 EXPOSE 3000
