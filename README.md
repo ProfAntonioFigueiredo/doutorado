@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+https://gamma.app/docs/Arquitetura-de-Software-e-Infraestrutura-em-Nuvem-Publica-bx0n6yolf4n41sp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Arquitetura de Software e Infraestrutura em Nuvem Pública
 
-## Available Scripts
+Este documento fornece uma visão geral detalhada da arquitetura de software e infraestrutura para uma aplicação front-end desenvolvida com Create React App e uma aplicação back-end em Java, ambas implementadas na nuvem pública da Microsoft Azure. Será abordado o design da arquitetura, os principais componentes, o fluxo de dados e a implementação em nuvem.
 
-In the project directory, you can run:
+Aplicação Front-end: Create React App
 
-### `npm start`
+A aplicação front-end é desenvolvida utilizando o framework React, por meio do Create React App. Essa abordagem oferece uma estrutura bem definida e pronta para uso, com suporte a recursos modernos como JSX, gerenciamento de estado com Redux, roteamento com React Router e integração com serviços back-end. A aplicação é responsiva, seguindo as melhores práticas de design e usabilidade, e se comunica com a API back-end por meio de chamadas HTTP.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Aplicação Back-end: Java e Oracle
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O back-end da aplicação é desenvolvido em Java, utilizando um framework como Spring Boot. Essa escolha proporciona uma solução robusta, escalável e de alta performance. O back-end é responsável por expor uma API RESTful, que é consumida pela aplicação front-end. O banco de dados utilizado é o Oracle, uma solução de banco de dados relacional amplamente adotada no mercado, que garante integridade, segurança e desempenho dos dados.
 
-### `npm test`
+Arquitetura em Camadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Camada de Apresentação
 
-### `npm run build`
+A camada de apresentação é responsável pela interface do usuário, interação e exibição de dados. Nela, a aplicação front-end em React é responsável por receber as entradas do usuário, processar as requisições e renderizar os componentes visuais.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Camada de Negócio
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A camada de negócio é onde a lógica de negócio é implementada. Nesta camada, a aplicação back-end em Java processa as requisições, valida os dados, executa as regras de negócio e retorna as respostas adequadas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Camada de Dados
 
-### `npm run eject`
+A camada de dados é responsável pelo armazenamento e gerenciamento dos dados. Nesta camada, o banco de dados Oracle armazena e gerencia os dados da aplicação, fornecendo uma interface segura e confiável para a camada de negócio.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Integração e Comunicação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Requisição do Usuário
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O usuário interage com a aplicação front-end, fazendo solicitações por meio de ações como cliques, formulários ou navegação.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Comunicação Front-End
 
-## Learn More
+A aplicação front-end, construída com React, processa as requisições do usuário e as envia para a API back-end por meio de chamadas HTTP.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Processamento Back-End
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A aplicação back-end em Java recebe as requisições, processa a lógica de negócio, consulta o banco de dados Oracle e retorna as respostas adequadas.
 
-### Code Splitting
+Implementação na Nuvem Pública
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Serviços Azure
 
-### Analyzing the Bundle Size
+A implementação em nuvem pública Azure utiliza diversos serviços da plataforma, como Azure App Service para hospedar as aplicações, Azure SQL Database para o banco de dados Oracle e Azure Storage para armazenar arquivos e dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Escalabilidade e Disponibilidade
 
-### Making a Progressive Web App
+A infraestrutura em nuvem oferece escalabilidade automática e alta disponibilidade, garantindo que a aplicação possa lidar com picos de demanda e permaneça acessível aos usuários.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Segurança e Monitoramento
 
-### Advanced Configuration
+A plataforma Azure fornece recursos de segurança, como autenticação, autorização e criptografia, além de ferramentas de monitoramento e análise para garantir a integridade e o desempenho da aplicação.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Implantação Contínua
 
-### Deployment
+O processo de implantação é automatizado, com a integração de ferramentas de CI/CD (Integração e Entrega Contínua), permitindo atualizações rápidas e confiáveis da aplicação.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Benefícios da Solução
 
-### `npm run build` fails to minify
+Escalabilidade
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A arquitetura em nuvem permite escalar os recursos de computação, armazenamento e banco de dados conforme a demanda, garantindo o desempenho da aplicação mesmo com o aumento de usuários.
+
+Disponibilidade
+
+A plataforma Azure oferece recursos de alta disponibilidade, como balanceamento de carga e redundância de dados, assegurando que a aplicação esteja sempre acessível aos usuários.
+
+Segurança
+
+A infraestrutura em nuvem fornece soluções robustas de segurança, como autenticação, criptografia e controle de acesso, protegendo os dados e a integridade da aplicação.
+
+Redução de Custos
+
+O modelo de licenciamento e pagamento por uso da nuvem pública Azure permite uma redução significativa nos custos de infraestrutura, manutenção e operação da aplicação.
+
+Conclusão
+
+A arquitetura de software e infraestrutura proposta, com a aplicação front-end em Create React App, a aplicação back-end em Java com banco de dados Oracle, e a implementação na nuvem pública Azure, fornece uma solução completa e escalável para o desenvolvimento e hospedagem da aplicação. Essa abordagem aproveita os benefícios da arquitetura em camadas, da integração entre os componentes e da plataforma de nuvem pública, garantindo uma aplicação de alto desempenho, segura e altamente disponível.
